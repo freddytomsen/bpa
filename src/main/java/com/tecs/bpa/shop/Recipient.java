@@ -1,0 +1,13 @@
+package com.tecs.bpa.shop;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class Recipient {
+
+    private String name;
+
+    private Zone worldZone;
+}
