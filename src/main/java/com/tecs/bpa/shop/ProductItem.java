@@ -7,8 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class ProductItem {
 
-    String name;
-    double price;
-    double weight;
-    boolean dangerousGoods;
+    private String name;
+    private double price;
+    private double weight;
+    private boolean dangerousGoods;
 }
