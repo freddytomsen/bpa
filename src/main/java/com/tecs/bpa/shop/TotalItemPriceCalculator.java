@@ -3,6 +3,9 @@ package com.tecs.bpa.shop;
 import java.util.List;
 
 public class TotalItemPriceCalculator {
+
+    public static final double CUSTOMER_DISCOUNT = 0.9;
+
     public TotalItemPriceCalculator() {
     }
 
@@ -10,7 +13,7 @@ public class TotalItemPriceCalculator {
         double totalOrderItemPrice = orderItemList.stream().mapToDouble(o -> o.getOrderPrice()).sum();
 
         if (level == Level.GOLD) {
-            totalOrderItemPrice = totalOrderItemPrice * Checkout.CUSTOMER_DISCOUNT;
+            totalOrderItemPrice = totalOrderItemPrice * CUSTOMER_DISCOUNT;
         }
         return totalOrderItemPrice;
     }

@@ -16,9 +16,9 @@ class TotalItemPriceCalculatorTest {
         OrderItem item1 = new OrderItem();
         item1.setOrderPrice(9.90);
         OrderItem item2 = new OrderItem();
-        item1.setOrderPrice(19.90);
+        item2.setOrderPrice(19.90);
         OrderItem item3 = new OrderItem();
-        item1.setOrderPrice(7.80);
+        item3.setOrderPrice(7.80);
         List<OrderItem> orderItemList = List.of(item1, item2, item3);
 
         double totalOrderItemPrice = calculator.calculateTotalOrderItemPrice(Level.NORMAL, orderItemList);

@@ -4,8 +4,7 @@ import java.util.List;
 
 public class Checkout {
 
-    public static final double AMOUNT_DISCOUNT = 0.95;
-    public static final double CUSTOMER_DISCOUNT = 0.9;
+
     private final ShipmentDetailsTask shipmentDetailsTask = new ShipmentDetailsTask();
     private final TotalItemPriceCalculator totalItemPriceCalculator = new TotalItemPriceCalculator();
     private final OrderItemsCreator orderItemsCreator = new OrderItemsCreator();
@@ -25,7 +24,7 @@ public class Checkout {
         double totalOrderItemPrice = totalItemPriceCalculator.calculateTotalOrderItemPrice(level, orderItemList);
 
         //Create and return order
-        return orderCreator.createOrder(orderInfo, customer, shipmentDetails, orderItemList, totalOrderItemPrice);
+        return orderCreator.createOrder(customer, shipmentDetails, orderItemList, totalOrderItemPrice);
 
     }
 
