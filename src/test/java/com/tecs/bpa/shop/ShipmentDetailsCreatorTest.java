@@ -23,7 +23,7 @@ class ShipmentDetailsCreatorTest {
         cart.setCartItemList(itemList);
 
         OrderInfo info = new OrderInfo(
-                new Customer("Peter", Zone.NORTH_AMERICA, Level.NORMAL),
+                new Customer("Peter", Zone.NORTH_AMERICA, CustomerLevel.NORMAL),
                 new Recipient("Peter", Zone.NORTH_AMERICA),
                 OrderInfo.ShippingPriority.STANDARD
         );
@@ -48,7 +48,7 @@ class ShipmentDetailsCreatorTest {
         cart.setCartItemList(itemList);
 
         OrderInfo info = new OrderInfo(
-                new Customer("Peter", Zone.NORTH_AMERICA, Level.NORMAL),
+                new Customer("Peter", Zone.NORTH_AMERICA, CustomerLevel.NORMAL),
                 new Recipient("Peter", Zone.NORTH_AMERICA),
                 OrderInfo.ShippingPriority.NEXT_DAY
         );

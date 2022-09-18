@@ -9,11 +9,11 @@ public class OrderCreator {
 
     Order createOrder(
             Customer customer, ShipmentDetails shipmentDetails,
-            List<OrderItem> orderItemList, double totalOrderItemPrice) {
+            OrderItemsDto orderItemsDto) {
         Order order = new Order();
-        order.setOrderItemList(orderItemList);
+        order.setOrderItemList(orderItemsDto.getOrderItemList());
         order.setCustomer(customer);
-        order.setTotalPrice(totalOrderItemPrice);
+        order.setTotalPrice(orderItemsDto.getTotalPrice());
         order.setShipmentDetails(shipmentDetails);
         return order;
     }

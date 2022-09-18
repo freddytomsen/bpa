@@ -9,10 +9,10 @@ public class TotalItemPriceCalculator {
     public TotalItemPriceCalculator() {
     }
 
-    double calculateTotalOrderItemPrice(Level level, List<OrderItem> orderItemList) {
+    double calculateTotalOrderItemPrice(CustomerLevel customerLevel, List<OrderItem> orderItemList) {
         double totalOrderItemPrice = orderItemList.stream().mapToDouble(o -> o.getOrderPrice()).sum();
 
-        if (level == Level.GOLD) {
+        if (customerLevel == CustomerLevel.GOLD) {
             totalOrderItemPrice = totalOrderItemPrice * CUSTOMER_DISCOUNT;
         }
         return totalOrderItemPrice;

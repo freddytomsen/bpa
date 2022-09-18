@@ -12,11 +12,14 @@ class OrderCreatorTest {
 
     @Test
     void testCreateOrder() {
-        Customer customer = new Customer("Peter", Zone.NORTH_AMERICA, Level.NORMAL);
+        Customer customer = new Customer("Peter", Zone.NORTH_AMERICA, CustomerLevel.NORMAL);
         ShipmentDetails shipmentDetails = new ShipmentDetails();
         List<OrderItem> orderItems = List.of(new OrderItem());
+        OrderItemsDto orderItemsDto = new OrderItemsDto();
+        orderItemsDto.setOrderItemList(orderItems);
+        orderItemsDto.setTotalPrice(123.4);
 
-        Order order = orderCreator.createOrder(customer, shipmentDetails, orderItems, 123.4);
+        Order order = orderCreator.createOrder(customer, shipmentDetails, orderItemsDto);
 
         assertEquals(customer, order.getCustomer());
         assertEquals(shipmentDetails, order.getShipmentDetails());

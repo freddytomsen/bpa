@@ -1,6 +1,6 @@
 package com.tecs.bpa.shop;
 
-public enum Level {
+public enum CustomerLevel {
 
     NORMAL, GOLD;
 

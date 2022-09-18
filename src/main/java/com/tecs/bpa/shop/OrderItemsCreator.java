@@ -5,12 +5,13 @@ import java.util.List;
 
 public class OrderItemsCreator {
 
+    public static final double CUSTOMER_DISCOUNT = 0.9;
     public static final double AMOUNT_DISCOUNT = 0.95;
 
     public OrderItemsCreator() {
     }
 
-    List<OrderItem> createOrderItems(Cart cart) {
+    OrderItemsDto createOrderItems(Cart cart, CustomerLevel level) {
         List<OrderItem> orderItemList = new ArrayList();
         cart.getCartItemList().stream().forEach(p -> {
             double orderPrice;
@@ -23,6 +24,15 @@ public class OrderItemsCreator {
             orderItem.setOrderPrice(orderPrice);
             orderItemList.add(orderItem);
         });
-        return orderItemList;
+        double totalOrderItemPrice = orderItemList.stream().mapToDouble(o -> o.getOrderPrice()).sum();
+
+        if (level == CustomerLevel.GOLD) {
+            totalOrderItemPrice = totalOrderItemPrice * CUSTOMER_DISCOUNT;
+        }
+        OrderItemsDto result = new OrderItemsDto();
+        result.setTotalPrice(totalOrderItemPrice);
+        result.setOrderItemList(orderItemList);
+
+        return result;
     }
 }

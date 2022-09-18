@@ -11,6 +11,6 @@ public class Customer {
 
     private Zone worldZone;
 
-    private Level level;
+    private CustomerLevel customerLevel;
 
 }
