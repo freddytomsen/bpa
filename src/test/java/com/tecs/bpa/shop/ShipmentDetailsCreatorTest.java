@@ -7,9 +7,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ShipmentDetailsTaskTest {
+class ShipmentDetailsCreatorTest {
     
-    private ShipmentDetailsTask task = new ShipmentDetailsTask();
+    private ShipmentDetailsCreator task = new ShipmentDetailsCreator();
 
     
     @Test

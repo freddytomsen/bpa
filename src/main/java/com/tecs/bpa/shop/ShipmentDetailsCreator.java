@@ -3,8 +3,8 @@ package com.tecs.bpa.shop;
 import java.time.LocalDate;
 import java.util.List;
 
-public class ShipmentDetailsTask {
-    public ShipmentDetailsTask() {
+public class ShipmentDetailsCreator {
+    public ShipmentDetailsCreator() {
     }
 
     ShipmentDetails getShipmentDetails(OrderInfo orderInfo, List<CartItem> cartItemList) {
