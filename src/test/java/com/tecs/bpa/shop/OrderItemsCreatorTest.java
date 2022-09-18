@@ -27,4 +27,18 @@ class OrderItemsCreatorTest {
         assertEquals(19.9, orderItems.get(1).getOrderPrice());
 
     }
+
+    @Test
+    void createOrderItemsAmoundDiscount() {
+        Cart cart = new Cart();
+        List<CartItem> itemList =
+                List.of(new CartItem(new ProductItem("asdf", 10, 1.0, false),10));
+        cart.setCartItemList(itemList);
+
+        List<OrderItem> orderItems = orderItemsCreator.createOrderItems(cart);
+
+        assertEquals(95, orderItems.get(0).getOrderPrice());
+
+    }
+
 }
