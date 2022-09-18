@@ -1,5 +1,8 @@
 package com.tecs.bpa.shop;
 
+import com.tecs.bpa.customer.Customer;
+import com.tecs.bpa.customer.CustomerLevel;
+
 public class Checkout {
 
 
@@ -16,7 +19,7 @@ public class Checkout {
         ShipmentDetails shipmentDetails = shipmentDetailsCreator.getShipmentDetails(orderInfo, cart.getCartItemList());
 
         //Create order items
-        OrderItemsDto orderItems = orderItemsCreator.createOrderItems(cart, customer);
+        OrderItemsDto orderItems = orderItemsCreator.createOrderItems(cart, customerLevel);
 
         //Create and return order
         return orderCreator.createOrder(customer, shipmentDetails, orderItems);

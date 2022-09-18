@@ -1,5 +1,7 @@
 package com.tecs.bpa.shop;
 
+import com.tecs.bpa.customer.Customer;
+import com.tecs.bpa.customer.CustomerLevel;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -1,5 +1,6 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.customer;
 
+import com.tecs.bpa.shop.Zone;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

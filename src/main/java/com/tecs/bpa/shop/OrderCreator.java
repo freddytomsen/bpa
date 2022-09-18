@@ -1,6 +1,6 @@
 package com.tecs.bpa.shop;
 
-import java.util.List;
+import com.tecs.bpa.customer.Customer;
 
 public class OrderCreator {
 

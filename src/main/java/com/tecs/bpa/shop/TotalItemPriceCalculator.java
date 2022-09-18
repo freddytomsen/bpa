@@ -1,5 +1,7 @@
 package com.tecs.bpa.shop;
 
+import com.tecs.bpa.customer.CustomerLevel;
+
 import java.util.List;
 
 public class TotalItemPriceCalculator {
