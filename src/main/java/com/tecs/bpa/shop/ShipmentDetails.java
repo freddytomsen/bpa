@@ -14,5 +14,6 @@ public class ShipmentDetails {
     private Recipient recipient;
     private TransportMode transportMode;
     private Double shippingCosts;
+    private double totalWeight;
 
 }

@@ -14,20 +14,22 @@ public class Checkout {
         ShipmentDetails shipmentDetails = new ShipmentDetails();
         Customer customer = orderInfo.getCustomer();
         List<OrderItem> orderItemList = new ArrayList<>();
-        cart.getCartItemList().stream().forEach(p -> {
+
+        for (CartItem item : cart.getCartItemList()) {
             double orderPrice;
-            if (p.getAmount() > 5) {
-                orderPrice = p.getProductItem().getPrice() * p.getAmount() * AMOUNT_DISCOUNT;
+            if (item.getAmount() > 5) {
+                orderPrice = item.getProductItem().getPrice() * item.getAmount() * AMOUNT_DISCOUNT;
             } else {
-                orderPrice = p.getProductItem().getPrice() * p.getAmount();
+                orderPrice = item.getProductItem().getPrice() * item.getAmount();
             }
+
             OrderItem orderItem = new OrderItem();
             orderItem.setOrderPrice(orderPrice);
-            if (p.getProductItem().isDangerousGoods()) {
+            if (item.getProductItem().isDangerousGoods()) {
                 shipmentDetails.setDangerousGoods(true);
             }
             orderItemList.add(orderItem);
-        });
+        }
 
         double totalOrderItemPrice = orderItemList.stream().mapToDouble(o -> o.getOrderPrice()).sum();
 
@@ -58,7 +60,6 @@ public class Checkout {
                 transportMode = TransportMode.AIR;
                 shipmentDetails.setMaxShippingDate(LocalDate.now().plusDays(2));
         }
-
 
         order.setOrderItemList(orderItemList);
         order.setCustomer(customer);
