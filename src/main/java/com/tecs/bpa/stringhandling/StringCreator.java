@@ -16,6 +16,19 @@ public class StringCreator {
         return listOfStrings;
     }
 
+    static String createALongString() {
+        List<String> listOfStrings = new ArrayList<>();
+        for(int i = 1; i <= nrOfStrings; i++) {
+            listOfStrings.add(" String " + i);
+        }
+        listOfStrings.add(listOfStrings.size()/2, "toReplace");
+        StringBuilder stringBuilder = new StringBuilder(listOfStrings.size());
+        for (String currentString : listOfStrings) {
+            stringBuilder.append(currentString);
+        }
+        return stringBuilder.toString();
+    }
+
 }
 
 

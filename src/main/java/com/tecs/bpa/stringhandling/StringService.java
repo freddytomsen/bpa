@@ -20,10 +20,6 @@ import static com.tecs.bpa.stringhandling.StringCreator.createALotOfStrings;
 public class StringService {
 
 
-
-
-
-    @Benchmark
     public String concatWithPlusInLoop() {
         List<String> aLotOfStrings = createALotOfStrings();
 
@@ -34,7 +30,7 @@ public class StringService {
         return result;
     }
 
-    @Benchmark
+
     public String concatWithConcatInLoop() {
         List<String> aLotOfStrings = createALotOfStrings();
         String result = "";
@@ -44,7 +40,7 @@ public class StringService {
         return result;
     }
 
-    @Benchmark
+
     public String concatWithBuilderInLoop() {
         List<String> aLotOfStrings = createALotOfStrings();
         StringBuilder stringBuilder = new StringBuilder(aLotOfStrings.size());
@@ -54,7 +50,6 @@ public class StringService {
         return stringBuilder.toString();
     }
 
-    @Benchmark
     public String concatWithApacheStringUtils() {
         List<String> aLotOfStrings = createALotOfStrings();
         return StringUtils.join(aLotOfStrings,"");
