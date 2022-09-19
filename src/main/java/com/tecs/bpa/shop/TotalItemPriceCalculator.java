@@ -1,6 +1,7 @@
 package com.tecs.bpa.shop;
 
 import com.tecs.bpa.customer.CustomerLevel;
+import com.tecs.bpa.order.OrderItem;
 
 import java.util.List;
 

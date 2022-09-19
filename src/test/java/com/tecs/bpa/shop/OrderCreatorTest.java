@@ -2,6 +2,10 @@ package com.tecs.bpa.shop;
 
 import com.tecs.bpa.customer.Customer;
 import com.tecs.bpa.customer.CustomerLevel;
+import com.tecs.bpa.order.Order;
+import com.tecs.bpa.order.OrderCreator;
+import com.tecs.bpa.order.OrderItem;
+import com.tecs.bpa.order.OrderItemsDto;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

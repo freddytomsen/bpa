@@ -1,13 +1,14 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.order;
 
 import com.tecs.bpa.customer.Customer;
+import com.tecs.bpa.shop.ShipmentDetails;
 
 public class OrderCreator {
 
     public OrderCreator() {
     }
 
-    Order createOrder(
+    public Order createOrder(
             Customer customer, ShipmentDetails shipmentDetails,
             OrderItemsDto orderItemsDto) {
         Order order = new Order();

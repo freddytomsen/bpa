@@ -1,6 +1,7 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.order;
 
 import com.tecs.bpa.customer.Customer;
+import com.tecs.bpa.shop.ShipmentDetails;
 import lombok.Data;
 
 import java.util.List;

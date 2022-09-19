@@ -1,5 +1,7 @@
 package com.tecs.bpa.shop;
 
+import com.tecs.bpa.order.OrderInfo;
+
 import java.time.LocalDate;
 import java.util.List;
 

@@ -1,5 +1,6 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.order;
 
+import com.tecs.bpa.order.OrderItem;
 import lombok.Getter;
 import lombok.Setter;
 

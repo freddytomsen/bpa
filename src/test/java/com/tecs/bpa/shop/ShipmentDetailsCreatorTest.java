@@ -2,6 +2,7 @@ package com.tecs.bpa.shop;
 
 import com.tecs.bpa.customer.Customer;
 import com.tecs.bpa.customer.CustomerLevel;
+import com.tecs.bpa.order.OrderInfo;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

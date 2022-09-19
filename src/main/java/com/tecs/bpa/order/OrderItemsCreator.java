@@ -1,6 +1,8 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.order;
 
 import com.tecs.bpa.customer.CustomerLevel;
+import com.tecs.bpa.shop.Cart;
+import com.tecs.bpa.shop.CartItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,7 @@ public class OrderItemsCreator {
     public OrderItemsCreator() {
     }
 
-    OrderItemsDto createOrderItems(Cart cart, CustomerLevel level) {
+    public OrderItemsDto createOrderItems(Cart cart, CustomerLevel level) {
         List<OrderItem> orderItemList = new ArrayList();
         for (CartItem cartItem: cart.getCartItemList()) {
                 double orderPrice;

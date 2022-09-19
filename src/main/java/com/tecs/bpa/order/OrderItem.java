@@ -1,5 +1,6 @@
-package com.tecs.bpa.shop;
+package com.tecs.bpa.order;
 
+import com.tecs.bpa.shop.CartItem;
 import lombok.Data;
 
 @Data
