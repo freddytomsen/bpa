@@ -1,8 +1,15 @@
 package com.tecs.bpa.stringhandling;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.*;
 
+import java.util.concurrent.TimeUnit;
+
+@BenchmarkMode(Mode.SingleShotTime)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@Fork(value = 1, warmups = 1)
+@Measurement(batchSize = 10, iterations = 1)
+@Warmup(batchSize = 10, iterations = 1)
 public class StringReplaceService {
 
 
