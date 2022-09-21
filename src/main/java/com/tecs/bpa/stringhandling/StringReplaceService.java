@@ -1,14 +1,9 @@
 package com.tecs.bpa.stringhandling;
-
 import org.apache.commons.lang3.StringUtils;
 import org.openjdk.jmh.annotations.*;
 
-import java.util.concurrent.TimeUnit;
 
-@BenchmarkMode(Mode.SingleShotTime)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Measurement(batchSize = 10, iterations = 10)
-@Warmup(batchSize = 10, iterations = 5)
+
 public class StringReplaceService {
 
 
