@@ -7,22 +7,24 @@ import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.SingleShotTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Fork(value = 1, warmups = 1)
-@Measurement(batchSize = 10, iterations = 1)
-@Warmup(batchSize = 10, iterations = 1)
+@Measurement(batchSize = 10, iterations = 10)
+@Warmup(batchSize = 10, iterations = 5)
 public class StringReplaceService {
 
 
     @Benchmark
-    public String benchmarkStringReplace() {
-        String mystring = StringCreator.createALongString();
-        return mystring.replace("toReplace", "newSubstring");
+    public String replaceByString() {
+        String myString = StringCreator.createALongString();
+        return myString.replace("toReplace", "newSubstring");
     }
 
     @Benchmark
-    public String benchmarkStringUtilsReplace() {
-        String mystring = StringCreator.createALongString();
-        return StringUtils.replace(mystring, "toReplace", "newSubstring");
+    public String replaceByUtils() {
+        String myString = StringCreator.createALongString();
+        return StringUtils.replace(myString, "toReplace", "newSubstring");
     }
 
 }
+
+
+
